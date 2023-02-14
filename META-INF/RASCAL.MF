@@ -1,4 +1,4 @@
-Project-Name: sle-rug
+Project-Name: sle-rug-project
 Source: src
 Require-Libraries: |lib://rascal-lsp|
 

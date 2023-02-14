@@ -19,5 +19,8 @@ form taxOfficeExample {
     "Value residue:"
       valueResidue: integer = sellingPrice - privateDebt
       
+  } else {
+    "Money left:"
+      rest: integer = 25
   }
 }

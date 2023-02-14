@@ -64,7 +64,7 @@ void myCommands(compileQL(start[Form] ql)) {
 void main() {
     registerLanguage(
         language(
-            pathConfig(srcs = [|std:///|, |project://sle-rug/src|]),
+            pathConfig(srcs = [|std:///|, |project://sle-rug-project/src|]),
             "QL",
             "myql",
             "IDE",

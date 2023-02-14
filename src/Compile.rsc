@@ -59,6 +59,7 @@ list[HTMLElement] question2html(AQuestion q) {
     case computedQuestion(AStr qText, AId var, AType t, AExpr e): {
       elements += label([text(qText.s), br()]);
       elements += input(\type = type2HtmlType(t), \name = var.name, \id = var.name, disabled = "" );
+      elements += br();
     }
     case ifthen(_, list[AQuestion] qs): {
       for(AQuestion q <- qs) {

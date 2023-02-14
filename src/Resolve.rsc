@@ -23,12 +23,15 @@ alias RefGraph = tuple[
 ]; 
 
 RefGraph resolve(AForm f) = <us, ds, us o ds>
-  when Use us := uses(f), Def ds := defs(f);
+  when Use us := uses(f), Def ds := defs(f); 
 
 Use uses(AForm f) {
-  return {}; 
+  Use us = { <x.src, x.name> | /ref(AId x):= f };
+  return us; 
 }
 
 Def defs(AForm f) {
-  return {}; 
+  Def dfs = { <x.name, x.src> | /question(_, AId x, _):= f };
+  dfs += { <x.name, x.src> | /computedQuestion(_, AId x, _, _):= f };
+  return dfs; 
 }
